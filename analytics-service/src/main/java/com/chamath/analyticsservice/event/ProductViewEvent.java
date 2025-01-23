@@ -1,5 +1,7 @@
 package com.chamath.analyticsservice.event;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +11,11 @@ public class ProductViewEvent {
 
     private Integer productId;
 
+    // Jackson annotations to ensure deserialization
+    @JsonCreator
+    public ProductViewEvent(@JsonProperty("productId") Integer productId) {
+        this.productId = productId;
+    }
 
     public Integer getProductId() {
         return productId;
@@ -18,11 +25,6 @@ public class ProductViewEvent {
         this.productId = productId;
     }
 
-    public ProductViewEvent(Integer productId) {
-        this.productId = productId;
-    }
-
     //browser
     //location
-
 }
