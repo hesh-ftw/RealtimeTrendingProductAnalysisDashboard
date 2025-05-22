@@ -1,4 +1,4 @@
-# RealtimeTrendingProductAnalysisDashboard
+# Real-time Trending Product Analysis Dashboard  
 
 
 • Developed an Event-driven Microservices to analyze and display the top 5 trending products in real time, based on the user behavior (products view count).
